@@ -1,0 +1,39 @@
+<form>
+    <div class="row">
+        <div class="col-md-12">
+            <label for="serverName">Server Name</label>
+            <!-- passing data to typescript using ngModel -->
+
+            <!-- <input type="text" name="serverName" class="form-group form-control" 
+            [(ngModel)]="server_name"> -->
+
+            <!-- passing data to typescript using local-reference -->
+            <input type="text" name="serverName" class="form-group form-control" 
+            #serverNameInput>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <label for="server-detail">Server Detail</label>
+            <!-- passing data to typescript using ngModel -->
+
+            <!-- <input type="text" name="server-detail" class="form-group form-control"
+            [(ngModel)]="server_content"> -->
+
+            <!-- passing data to typescript using local-reference -->
+            <input type="text" name="server-detail" class="form-group form-control" 
+            #serverContentInput>
+
+
+
+        </div>
+
+    </div>
+    <div class="col-md-12">
+
+        <button class="btn btn-success" type="button" (click)="addServer(serverNameInput)">Add Server</button>
+        <button class="btn btn-info" type="button" (click)="addBluePrint()">Add Blue Print Of Server</button>
+    </div>
+
+</form>
